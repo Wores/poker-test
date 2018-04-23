@@ -7,7 +7,7 @@ class TwoPairs extends AbstractPokerHand {
 
     matches(player) {
         const hand = player.getHand();
-        return hand.getNumberOfPairs() == 2;
+        return hand.getNumberOfPairs() === 2;
     }
 
 }

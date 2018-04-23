@@ -10,9 +10,8 @@ class RoyalStraightFlush extends AbstractPokerHand {
     matches(player) {
         const royalStraightFlushNumbers = [1, 10, 11, 12, 13];
         const hand  = player.getHand();
-        return hand.isFlush() && 
-        royalStraightFlushNumbers.filter(e => hand.containsCardNumberOf(e))
-            .length === royalStraightFlushNumbers.length;
+        return hand.isFlush() 
+            && hand.isSameArrayWithCardNumbers(royalStraightFlushNumbers);
     }
 
 }

@@ -9,7 +9,7 @@ class FullHouse extends AbstractPokerHand {
     const hand = player.getHand();
     const maxNumberOfAKind = hand.getMaxNumberOfAKind();
     const numberOfPairs = hand.getNumberOfPairs();
-    return maxNumberOfAKind === 3 && numberOfPairs == 1;
+    return maxNumberOfAKind === 3 && numberOfPairs === 1;
   }
 }
 

@@ -39,8 +39,8 @@ class Hand {
     return Math.max.apply([], lengthArray);
   }
 
-  containsCardNumberOf(num) {
-    return this.getCardNumbers().includes(num);
+  isSameArrayWithCardNumbers(numArray) {
+    return `${this.getCardNumbers().sort()}` === `${numArray}`;
   }
 
   isFlush() {
@@ -48,12 +48,12 @@ class Hand {
   }
 
   isStraight() {
-    const sortedNumbers = this.getCardNumbers().sort();
-    const minNumber = Math.min.apply([], sortedNumbers);
-    const sequentialNumbers = new Array(sortedNumbers.length)
+    const cardNumbers = this.getCardNumbers();
+    const minNumber = Math.min.apply([], cardNumbers);
+    const sequentialNumbers = new Array(cardNumbers.length)
       .fill(minNumber)
       .map((e, i) => e + i);
-    return `${sequentialNumbers}` === `${sortedNumbers}`;
+    return this.isSameArrayWithCardNumbers(sequentialNumbers);
   }
 
   fitTypes() {

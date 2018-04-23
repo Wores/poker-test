@@ -6,8 +6,8 @@ class ThreeOfAKind extends AbstractPokerHand {
   }
 
   matches(player) {
-    const maxNumberOfAKind = player.getHand().getMaxNumberOfAKind();
-    return maxNumberOfAKind === 3;
+    const hand = player.getHand();
+    return hand.getMaxNumberOfAKind() === 3;
   }
 }
 
