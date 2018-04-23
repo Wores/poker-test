@@ -82,15 +82,3 @@ class Hand {
 }
 
 module.exports = Hand;
-
-// let hand = new Hand();
-// hand.cards = [
-//   new Card(CardTypeEnum.heart, 1),
-//   new Card(CardTypeEnum.heart, 3),
-//   new Card(CardTypeEnum.heart, 5),
-//   new Card(CardTypeEnum.heart, 7),
-//   new Card(CardTypeEnum.heart, 9),
-// ];
-// console.log(hand)
-// console.log(`is straight = ${hand.isStraight()}`);
-// console.log(Card);
