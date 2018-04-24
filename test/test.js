@@ -166,6 +166,13 @@ describe("Hand", function() {
       assert.equal(hand.getMaxNumberOfAKind(), 3);
     });
   });
+  describe("正常系#isSameArrayWithCardNumbers()", function() {
+    it("配列が同じ内容ならtrue", function() {
+      let hand = new Hand();
+      hand.cards = cardsGenerator.genStraight();
+      assert.equal(hand.isSameArrayWithCardNumbers(hand.getCardNumbers()), true);
+    });
+  });
   describe("異常系#setCards", function() {
     it("6枚以上のカードをセットしたらerrを投げる", function() {
       let hand = new Hand();
