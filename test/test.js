@@ -189,9 +189,9 @@ describe("Hand", function() {
       it("追加してカードが6枚異常になったらerrを投げる", function() {
         let hand = new Hand();
         let isCatchError = false;
+        hand.cards = cardsGenerator.genFourOfAKind();
         try {
-          hand.cards = cardsGenerator.genFourOfAKind();
-          hand.addCards(cardsGenerator.genFullHouse(0));
+          hand.addCards(cardsGenerator.genFullHouse()[0]);
         } catch (e) {
           isCatchError = true;
         }
